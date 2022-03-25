@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="styles/main.css">
+
+  <body>
+      <h1 style="text-align:center">Show Random Receipe</h1>
+    <div id="header">
+     
+    </div>
+    <!-- <div id="data"></div> -->
+    <input oninput="debounce(main,1000)" type="text" id="query">
+    <div id="movies">
+</div>  
+</body>
+</html>
+
+<script  type="module">     
+    import navbar from './components/navbar.js';
+    console.log(navbar)
+    let header= document.querySelector("#header");
+    header.innerHTML=navbar();
+</script>

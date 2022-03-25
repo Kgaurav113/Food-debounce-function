@@ -1,0 +1,42 @@
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    border: solid 1px black;
+    padding-left: 4%;
+    padding-right: 4%;
+    text-decoration: none;
+    background-color: black;
+  }
+
+  #options {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    color: white;
+
+  }
+  a{
+    text-decoration: none;
+color: white;
+  }
+  #data{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap:5%;
+     padding: 5%;
+  }
+  img{
+      width: 50%;
+  }
+
+  /*  */
+  input{
+    width:195px;
+   }
+#food{
+    width:200px;
+    height: 206px;
+    border:1px solid rgb(0, 0, 0);
+    border-top: none;
+    overflow: scroll;
+}

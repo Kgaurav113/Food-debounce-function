@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="styles/main.css">
+<body>
+      <h1 style="text-align: center;">Gaurav food stall</h1>
+    <div id="header">
+     </div>
+<!-- <input oninput="debounce()" type="text" id="query"> -->
+<input type="text" id="query">
+    <div id="food">
+</div>
+<div id="display">
+</div>
+  </body>
+</html>
+<script  type="module">     
+    import navbar from './components/navbar.js';
+    console.log(navbar)
+    let header= document.querySelector("#header");
+    header.innerHTML=navbar();
+ import {searchfood,appendfood,main,debounce} from './scripts/fetchAppend.js'
+ 
+document.getElementById("query").addEventListener("oninput",function(){
+debounce();
+})
+ 
+let input = document.getElementById("query").value;
+let response= await searchfood(` https://www.themealdb.com/api/json/v1/1/search.php?s=${input}`);
+appendfood(response);
+</script>
